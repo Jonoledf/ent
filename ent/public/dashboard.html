@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - ENT Yvelines</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="images/logo-yvelines.png" alt="ENT Yvelines" class="logo">
+                <h1>Espace Numérique de Travail</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <img src="images/avatar-default.png" alt="Avatar" class="user-avatar">
+                    <span class="user-name">Jean Dupont</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-user"></i> Mon profil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="dashboard-main">
+            <!-- Sidebar -->
+            <aside class="dashboard-sidebar">
+                <nav>
+                    <ul class="menu">
+                        <li class="active">
+                            <a href="#">
+                                <i class="fas fa-home"></i>
+                                <span>Accueil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Emploi du temps</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-book"></i>
+                                <span>Cahier de texte</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Notes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-envelope"></i>
+                                <span>Messagerie</span>
+                                <span class="badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Documents</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-users"></i>
+                                <span>Classes</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-footer">
+                        <a href="#">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Aide</span>
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="dashboard-content">
+                <div class="content-header">
+                    <h2>Tableau de bord</h2>
+                    <div class="breadcrumb">
+                        <span>Accueil</span>
+                    </div>
+                </div>
+
+                <!-- Widgets Row -->
+                <div class="widgets-row">
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-bell"></i> Alertes</h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="alert-item">
+                                <div class="alert-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <p>Devoir de mathématiques à rendre pour demain</p>
+                                    <small>15:30 - 12/06/2023</small>
+                                </div>
+                            </div>
+                            <div class="alert-item">
+                                <div class="alert-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <p>Nouvelle note disponible en histoire-géographie</p>
+                                    <small>09:15 - 10/06/2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-calendar-day"></i> Aujourd'hui</h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="schedule-item">
+                                <div class="schedule-time">08h-09h</div>
+                                <div class="schedule-details">
+                                    <strong>Mathématiques</strong>
+                                    <span>Salle 204 - M. Durand</span>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">09h-10h</div>
+                                <div class="schedule-details">
+                                    <strong>Français</strong>
+                                    <span>Salle 112 - Mme. Martin</span>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">10h-11h</div>
+                                <div class="schedule-details">
+                                    <strong>Histoire-Géographie</strong>
+                                    <span>Salle 305 - M. Lefèvre</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Row -->
+                <div class="content-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-book-open"></i> Dernières activités</h3>
+                            <a href="#" class="btn-link">Voir tout</a>
+                        </div>
+                        <div class="card-body">
+                            <table class="activity-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Matière</th>
+                                        <th>Activité</th>
+                                        <th>Statut</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12/06/23</td>
+                                        <td>Mathématiques</td>
+                                        <td>Devoir : Trigonométrie</td>
+                                        <td><span class="status pending">À rendre</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10/06/23</td>
+                                        <td>Français</td>
+                                        <td>Commentaire de texte</td>
+                                        <td><span class="status done">Rendu</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>08/06/23</td>
+                                        <td>SVT</td>
+                                        <td>TP : Dissection</td>
+                                        <td><span class="status graded">Noté: 15/20</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>Accès rapide</h3>
+                    <div class="links-grid">
+                        <a href="#" class="quick-link">
+                            <i class="fas fa-file-download"></i>
+                            <span>Documents partagés</span>
+                        </a>
+                        <a href="#" class="quick-link">
+                            <i class="fas fa-video"></i>
+                            <span>Classes virtuelles</span>
+                        </a>
+                        <a href="#" class="quick-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Résultats</span>
+                        </a>
+                        <a href="#" class="quick-link">
+                            <i class="fas fa-utensils"></i>
+                            <span>Cantine</span>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

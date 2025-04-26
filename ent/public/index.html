@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - ENT Yvelines</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="auth-container">
+        <div class="auth-header">
+            <img src="images/logo-yvelines.png" alt="Logo Yvelines" class="logo">
+            <h1>Connexion à l'ENT</h1>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+            <div id="errorMessage" class="error-message" style="display:none;"></div>
+            
+            <div class="form-group">
+                <label for="username">Identifiant (email ou matricule)</label>
+                <input type="text" id="username" name="username" required class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required class="form-control">
+            </div>
+            
+            <div class="form-options">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Se souvenir de moi</label>
+                </div>
+                
+                <div class="links-group">
+                    <a href="forgot-password.html" class="text-link">Mot de passe oublié ?</a>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Connexion</button>
+        </form>
+        
+        <footer class="auth-footer">
+            <p>© 2023 ENT Yvelines - Conforme RGPD</p>
+        </footer>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
